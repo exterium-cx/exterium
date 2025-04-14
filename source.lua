@@ -883,16 +883,6 @@ function Library:create(options)
 		end,
 	}
 
-	settingsTab:slider{
-		Name = "UI Drag Speed",
-		Description = "How smooth the dragging looks.",
-		Max = 20,
-		Default = 14,
-		Callback = function(value)
-			Library.DragSpeed = (20 - value)/100
-		end,
-	}
-
 	local creditsTab = Library.tab(mt, {
 		Name = "Credits",
 		Internal = creditsTabIcon,
