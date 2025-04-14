@@ -412,13 +412,6 @@ function Library:create(options)
 		end
 	end
 
-	options = self:set_defaults({
-		Name = "Mercury",
-		Size = UDim2.fromOffset(600, 400),
-		Theme = self.Themes[settings.Theme],
-		Link = "https://github.com/deeeity/mercury-lib"
-	}, options)
-
 	if getgenv and getgenv().MercuryUI then
 		getgenv():MercuryUI()
 		getgenv().MercuryUI = nil
@@ -528,15 +521,6 @@ function Library:create(options)
 		Position = UDim2.new(0, 5,0, 35),
 		Theme = {BackgroundColor3 = "Secondary"}
 	}):round(5)
-
-	local searchIcon = urlBar:object("ImageLabel", {
-		AnchorPoint = Vector2.new(0, .5),
-		Position = UDim2.new(0, 5,0.5, 0);
-		Theme = {ImageColor3 = "Tertiary"},
-		Size = UDim2.fromOffset(16, 16),
-		Image = "http://www.roblox.com/asset/?id=8497489946",
-		BackgroundTransparency = 1
-	})
 
 	local link = urlBar:object("TextLabel", {
 		AnchorPoint = Vector2.new(0, 0.5),
