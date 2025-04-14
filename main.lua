@@ -1,31 +1,11 @@
--- Load the modified library from your GitHub
-local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/exterium-cx/exterium/refs/heads/main/source.lua?token=GHSAT0AAAAAADCFPJM3VPIC4UWZ5PBSQJ7WZ74LS3A", true))()
+local loadModule = function(url)
+    return loadstring(game:HttpGet(url, true))()
+end
 
--- Create the GUI
-local GUI = Mercury:Create{
-    Name = "exterium.cx",
-    Size = UDim2.fromOffset(600, 400),
-    Theme = Mercury.Themes.Purple,
-    Link = "https://github.com/yacrum/UiLib"
-}
+-- Load menu
+local GUI = loadModule("https://raw.githubusercontent.com/exterium-cx/exterium/refs/heads/main/source.lua?token=GHSAT0AAAAAADCFPJM3EEV5KIQPCPH2MQIGZ74LWLQ")()
 
-GUI:Notification{
-    Title = "Welcome",
-    Text = "Welcome to exterium.cx!",
-    Duration = 5
-}
-
--- Watermark
-local watermark = Drawing.new("Text")
-watermark.Text = "exterium.cx"
-watermark.Size = 18
-watermark.Color = Color3.fromRGB(255, 255, 255)
-watermark.Position = Vector2.new(10, 10)
-watermark.BackgroundTransparency = 0.5
-watermark.BackgroundColor = Color3.fromRGB(50, 50, 50)
-watermark.Visible = true
-
--- Tabs
+-- Create tabs
 local movementTab = GUI:Tab{Name = "Movement Features", Icon = "rbxassetid://8569322835"}
 local visualsTab = GUI:Tab{Name = "Visuals", Icon = "rbxassetid://8569322835"}
 local featuresTab = GUI:Tab{Name = "Features", Icon = "rbxassetid://8569322835"}
