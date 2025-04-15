@@ -1,10 +1,3 @@
---[[
-  UI lib made by bungie#0001
-  
-  - Please do not use this without permission, I am working really hard on this UI to make it perfect and do not have a big 
-    problem with other people using it, please just make sure you message me and ask me before using.
-]]
-
 -- / Locals
 local Workspace = game:GetService("Workspace")
 local Player = game:GetService("Players").LocalPlayer
@@ -80,7 +73,7 @@ end
 
 local library = {
     version = "2.0.2",
-    title = title or "xsx " .. tostring(math.random(1,366)),
+    title = title or "exterium.cx " .. tostring(math.random(1,366)),
     fps = 0,
     rank = "private"
 }
@@ -202,7 +195,7 @@ function library:Watermark(text)
         end
     end
 
-    tetx = text or "xsx v2"
+    tetx = text or "exterium.cx v2"
 
     local watermark = Instance.new("ScreenGui")
     local watermarkPadding = Instance.new("UIPadding")
@@ -326,7 +319,7 @@ function library:Watermark(text)
 
     local WatermarkFunctions = {}
     function WatermarkFunctions:AddWatermark(text)
-        tetx = text or "xsx v2"
+        tetx = text or "exterium.cx v2"
 
         local edge = Instance.new("Frame")
         local edgeCorner = Instance.new("UICorner")
@@ -692,9 +685,9 @@ function library:Introduction()
     local bar = Instance.new("Frame")
     local barCorner = Instance.new("UICorner")
     local barLayout = Instance.new("UIListLayout")
-    local xsxLogo = Instance.new("ImageLabel")
+    local exterium.cxLogo = Instance.new("ImageLabel")
     local hashLogo = Instance.new("ImageLabel")
-    local xsx = Instance.new("TextLabel")
+    local exterium.cx = Instance.new("TextLabel")
     local text = Instance.new("TextLabel")
     local pageLayout = Instance.new("UIListLayout")
     
@@ -750,17 +743,17 @@ function library:Introduction()
     barLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
     barLayout.SortOrder = Enum.SortOrder.LayoutOrder
     
-    xsxLogo.Name = "xsxLogo"
-    xsxLogo.Parent = background
-    xsxLogo.AnchorPoint = Vector2.new(0.5, 0.5)
-    xsxLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    xsxLogo.BackgroundTransparency = 1.000
-    xsxLogo.Position = UDim2.new(0.5, 0, 0.5, 0)
-    xsxLogo.Size = UDim2.new(0, 448, 0, 150)
-    xsxLogo.Visible = true
-    xsxLogo.Image = "http://www.roblox.com/asset/?id=9365068051"
-    xsxLogo.ImageColor3 = Color3.fromRGB(159, 115, 255)
-    xsxLogo.ImageTransparency = 1
+    exterium.cxLogo.Name = "exterium.cxLogo"
+    exterium.cxLogo.Parent = background
+    exterium.cxLogo.AnchorPoint = Vector2.new(0.5, 0.5)
+    exterium.cxLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    exterium.cxLogo.BackgroundTransparency = 1.000
+    exterium.cxLogo.Position = UDim2.new(0.5, 0, 0.5, 0)
+    exterium.cxLogo.Size = UDim2.new(0, 448, 0, 150)
+    exterium.cxLogo.Visible = true
+    exterium.cxLogo.Image = "http://www.roblox.com/asset/?id=9365068051"
+    exterium.cxLogo.ImageColor3 = Color3.fromRGB(159, 115, 255)
+    exterium.cxLogo.ImageTransparency = 1
     
     hashLogo.Name = "hashLogo"
     hashLogo.Parent = background
@@ -774,16 +767,16 @@ function library:Introduction()
     hashLogo.ImageColor3 = Color3.fromRGB(159, 115, 255)
     hashLogo.ImageTransparency = 1
     
-    xsx.Name = "xsx"
-    xsx.Parent = background
-    xsx.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    xsx.BackgroundTransparency = 1.000
-    xsx.Size = UDim2.new(0, 80, 0, 21)
-    xsx.Font = Enum.Font.Code
-    xsx.Text = "powered by xsx"
-    xsx.TextColor3 = Color3.fromRGB(124, 124, 124)
-    xsx.TextSize = 10.000
-    xsx.TextTransparency = 1
+    exterium.cx.Name = "exterium.cx"
+    exterium.cx.Parent = background
+    exterium.cx.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    exterium.cx.BackgroundTransparency = 1.000
+    exterium.cx.Size = UDim2.new(0, 80, 0, 21)
+    exterium.cx.Font = Enum.Font.Code
+    exterium.cx.Text = "powered by exterium.cx"
+    exterium.cx.TextColor3 = Color3.fromRGB(124, 124, 124)
+    exterium.cx.TextSize = 10.000
+    exterium.cx.TextTransparency = 1
     
     text.Name = "text"
     text.Parent = background
@@ -804,12 +797,12 @@ function library:Introduction()
     pageLayout.SortOrder = Enum.SortOrder.LayoutOrder
     pageLayout.VerticalAlignment = Enum.VerticalAlignment.Center
 
-    CreateTween("xsxRotation", 0)
+    CreateTween("exterium.cxRotation", 0)
     local MinusAmount = -16
     coroutine.wrap(function()
         while wait() do
             MinusAmount = MinusAmount + 0.4
-            TweenService:Create(xsxLogo, TweenTable["xsxRotation"], {Rotation = xsxLogo.Rotation - MinusAmount}):Play()
+            TweenService:Create(exterium.cxLogo, TweenTable["exterium.cxRotation"], {Rotation = exterium.cxLogo.Rotation - MinusAmount}):Play()
         end
     end)()
 
@@ -818,12 +811,12 @@ function library:Introduction()
     wait(.2)
     TweenService:Create(bar, TweenTable["introduction"], {Size = UDim2.new(0, 298, 0, 1)}):Play()
     wait(.2)
-    TweenService:Create(xsx, TweenTable["introduction"], {TextTransparency = 0}):Play()
+    TweenService:Create(exterium.cx, TweenTable["introduction"], {TextTransparency = 0}):Play()
     TweenService:Create(text, TweenTable["introduction"], {TextTransparency = 0}):Play()
     wait(.3)
-    TweenService:Create(xsxLogo, TweenTable["introduction"], {ImageTransparency = 0}):Play()
+    TweenService:Create(exterium.cxLogo, TweenTable["introduction"], {ImageTransparency = 0}):Play()
     wait(2)
-    TweenService:Create(xsxLogo, TweenTable["introduction"], {ImageTransparency = 1}):Play()
+    TweenService:Create(exterium.cxLogo, TweenTable["introduction"], {ImageTransparency = 1}):Play()
     wait(.2)
     TweenService:Create(hashLogo, TweenTable["introduction"], {ImageTransparency = 0}):Play()
     wait(2)
@@ -831,7 +824,7 @@ function library:Introduction()
     wait(.1)
     TweenService:Create(text, TweenTable["introduction"], {TextTransparency = 1}):Play()
     wait(.1)
-    TweenService:Create(xsx, TweenTable["introduction"], {TextTransparency = 1}):Play()
+    TweenService:Create(exterium.cx, TweenTable["introduction"], {TextTransparency = 1}):Play()
     wait(.1)
     TweenService:Create(bar, TweenTable["introduction"], {Size = UDim2.new(0, 0, 0, 1)}):Play()
     wait(.1)
